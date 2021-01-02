@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link href="/lib/fontawesome/css/all.min.css" rel="stylesheet">
+     <link rel="stylesheet" href="/css/style.css">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+     <section class="menu-books">
+          <div class="container-fluid">
+               <div class="row">
+                    <% categories.forEach(function(category){ %>
+                    <div class="col col-md-2">
+                         <a href="/books/<%=category.slug%>" class="btn w-100 category-name"><i class="fas fa-book text-secondary"></i> <%=category.title%><span class="badge bg-warning text-dark"><%=category.bookCount%></span></a>
+                    </div>
+                    <% }) %>
+               </div>
+          </div>
+          <button id="btnCloseMenu" class="btn btn-link close-btn"><i class="fas fa-times"></i> Close</button>
+     </section>
+
+
+
+     <navbar id="navbar">
+          <div class="container-fluid">
+               <div class="row">
+                    <div class="col-lg-2 col-6 order-1 order-md-1">
+                         <div class="logo"><a href="/"><img src="/img/logo.png" class="img-fluid"></a></div>
+                    </div>
+                    <div class="col-lg-8 col-12 order-3 order-lg-2 search-bar">
+                         <div class="menu-icon">
+                              <button id="btnToogleMenu" class="btn btn-link"><i class="fas fa-bars fa-2x"></i> Books</button>
+                         </div>
+                         <div class="input-group input-group-lg">
+                              <span class="input-group-text" id="inputGroup-sizing-lg"><i class="fas fa-search"></i></span>
+                              <input type="text" class="form-control" placeholder="Type the book name to search it" aria-label="Recipient's username" aria-describedby="button-addon2">
+                              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Search</button>
+                         </div>
+     
+                    </div>
+                    <div class="col-lg-2 col-6 order-2 order-lg-3 menu">
+                         <ul>
+                              <li><i class="fas fa-user"></i> Signin</li>
+                              <li><i class="fas fa-shopping-basket"></i> Basket</li>
+                         </ul>
+                    </div>
+               </div>
+               
+          </div>
+     </navbar>

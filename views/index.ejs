@@ -1,0 +1,70 @@
+<%- include("header", {categories}); %>
+
+     <section id="banner" class="banner">
+          <div class="container">
+               <div class="row">
+                    <div class="col-12">
+                         <img src="/img/banner/banner.jpg" alt="">
+                    </div>
+               </div>
+               <div class="row">
+                    <div class="col-md-9">
+                         <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                              <ol class="carousel-indicators">
+                                   <% banner.forEach(function(banner, index){ %>
+                                        <li data-bs-target="#carouselExampleControls" data-bs-slide-to="<%=index%>" class="<%=index==0 ? 'active' : ''%>"></li>
+                                   <% }) %>
+                              </ol>
+                              <div class="carousel-inner">
+                              <% banner.forEach(function(banner, index){ %>
+                                <div class="carousel-item <%=index==0 ? 'active' : ''%>">
+                                  <img src="/img/banner/<%=banner.image%>" class="d-block w-100" alt="...">
+                                </div>
+                              <% }) %>
+                              </div>
+                              <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
+                                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                   <span class="visually-hidden">Previous</span>
+                                 </a>
+                                 <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
+                                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                   <span class="visually-hidden">Next</span>
+                                 </a>
+                         </div>
+                    </div>
+                    <div class="col-md-3 banner-advert">
+                         <img src="/img/advert/advert1.jpg" alt="">
+                    </div>
+               </div>
+               
+          </div>
+     </section>
+
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+     <p>&nbsp;</p>
+<%- include ("footer"); %>
+    
